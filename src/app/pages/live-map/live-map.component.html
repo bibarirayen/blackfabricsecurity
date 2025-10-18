@@ -1,0 +1,16 @@
+<div class="map-container">
+  <!-- Guards List -->
+  <div class="guards-list">
+    <h3>Active Guards</h3>
+    <div *ngFor="let guard of guards" class="guard-item" (click)="focusOnGuard(guard)">
+      <img src="https://cdn-icons-png.flaticon.com/512/3069/3069174.png" alt="Guard Icon" class="guard-icon">
+      <div>
+        <h4>{{ guard.name }}</h4>
+        <p>{{ guard.status }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Map -->
+  <div id="map"></div>
+</div>

@@ -1,0 +1,18 @@
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.modal {
+  transition: opacity 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .table-responsive {
+    font-size: 14px;
+  }
+
+  .btn-sm {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}

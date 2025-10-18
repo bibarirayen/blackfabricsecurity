@@ -1,0 +1,72 @@
+<div class="container">
+  <h2>Assignments Management</h2>
+
+  <div class="toolbar">
+    <input type="text" placeholder="Search by guard..." [(ngModel)]="searchTerm" (input)="filterAssignments()" />
+        <button class="add-btn" >Search</button>
+
+    <button class="add-btn" (click)="openAddModal()">Add Assignment</button>
+  </div>
+
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Guard</th>
+        <th>Trajects</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let assignment of filteredAssignments">
+        <td>{{ assignment.id }}</td>
+        <td>{{ assignment.guard }}</td>
+        <td>{{ assignment.trajects.join(', ') }}</td>
+        <td>{{ assignment.startDate }}</td>
+        <td>{{ assignment.endDate }}</td>
+        <td>
+          <button class="edit-btn" (click)="openEditModal(assignment)">Edit</button>
+          <button class="delete-btn" (click)="deleteAssignment(assignment.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ADD / EDIT MODAL -->
+  <div class="modal" *ngIf="showAddEditModal">
+    <div class="modal-content">
+      <h3>{{ editMode ? 'Edit Assignment' : 'Add New Assignment' }}</h3>
+
+      <form [formGroup]="assignmentForm">
+        <label>Guard:</label>
+        <select formControlName="guard">
+          <option *ngFor="let g of guards" [value]="g">{{ g }}</option>
+        </select>
+
+        <div formArrayName="trajects">
+          <label>Trajects:</label>
+          <div *ngFor="let t of trajectsFormArray.controls; let i = index">
+            <select [formControlName]="i">
+              <option *ngFor="let tr of trajects" [value]="tr">{{ tr }}</option>
+            </select>
+            <button type="button" class="remove-small" (click)="removeTrajectField(i)">x</button>
+          </div>
+          <button type="button" class="add-small" (click)="addTrajectField()">+ Add Traject</button>
+        </div>
+
+        <label>Start Date:</label>
+        <input type="date" formControlName="startDate" />
+
+        <label>End Date:</label>
+        <input type="date" formControlName="endDate" />
+
+        <div class="modal-actions">
+          <button type="button" class="save-btn" (click)="saveAssignment()">Save</button>
+          <button type="button" class="cancel-btn" (click)="closeModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

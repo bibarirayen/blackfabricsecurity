@@ -1,0 +1,48 @@
+<nav class="navbar navbar-dark bg-dark mb-3">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+
+    <!-- Left side: Sidebar toggle + Brand -->
+    <div class="d-flex align-items-center">
+      <!-- Sidebar toggle button -->
+      <button class="btn btn-outline-light btn-sm me-2" (click)="toggleSidebar.emit()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <span class="navbar-brand mb-0 h5">Admin Management System</span>
+    </div>
+
+    <!-- Right side: Notifications + Profile -->
+    <div class="d-flex align-items-center">
+
+      <!-- Notifications Dropdown -->
+      <div class="dropdown me-2">
+        <button class="btn btn-outline-light btn-sm position-relative" data-bs-toggle="dropdown">
+          <i class="fas fa-bell"></i>
+          <span class="badge bg-danger position-absolute top-0 start-100 translate-middle">3</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end p-0" style="width: 300px; max-height: 250px; overflow-y: auto;">
+          <li><h6 class="dropdown-header">Notifications</h6></li>
+          <li><a class="dropdown-item" href="#">🔔 New user registered</a></li>
+          <li><a class="dropdown-item" href="#">📦 Order #1234 shipped</a></li>
+          <li><a class="dropdown-item" href="#">⚠️ Server overload warning</a></li>
+          <li><a class="dropdown-item" href="#">📧 New message from support</a></li>
+          <li><a class="dropdown-item" href="#">📝 Task deadline tomorrow</a></li>
+          <li><a class="dropdown-item" href="#">✅ Backup completed</a></li>
+        </ul>
+      </div>
+
+      <!-- Profile Dropdown -->
+      <div class="dropdown">
+        <button class="btn btn-outline-light btn-sm dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown">
+          <i class="fas fa-user me-1"></i> Admin
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">👤 Profile</a></li>
+          <li><a class="dropdown-item" href="#">⚙️ Settings</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="#">🚪 Logout</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</nav>

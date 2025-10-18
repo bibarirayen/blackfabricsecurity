@@ -1,0 +1,214 @@
+<div id="dashboard-section" class="content-section fade-in">
+  <div
+    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h3 class="fw-bold">Dashboard</h3>
+
+    <div class="btn-toolbar mb-2 mb-md-0">
+      <div class="btn-group me-2">
+        <button type="button" class="btn btn-sm btn-outline-secondary">
+          <i class="fas fa-download me-1"></i> Export
+        </button>
+      </div>
+      <div class="btn-group me-2">
+  <button type="button" class="btn btn-sm btn-outline-secondary" (click)="onRefresh()">
+    <i class="fas fa-sync-alt me-1"></i> Refresh
+  </button>
+</div>
+
+    </div>
+  </div>
+
+  <!-- KPI Cards -->
+  <div class="row mb-4">
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card kpi-card bg-primary text-white">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-uppercase mb-1">Active Guards</div>
+              <div class="h5 mb-0 font-weight-bold">24</div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-user-shield fa-2x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card kpi-card bg-success text-white">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-uppercase mb-1">Open Reports</div>
+              <div class="h5 mb-0 font-weight-bold">7</div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-clipboard-list fa-2x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card kpi-card bg-info text-white">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-uppercase mb-1">Sites Covered</div>
+              <div class="h5 mb-0 font-weight-bold">12</div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-building fa-2x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card kpi-card bg-warning text-white">
+        <div class="card-body">
+          <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-uppercase mb-1">Checkpoints </div>
+              <div class="h5 mb-0 font-weight-bold">156</div>
+            </div>
+            <div class="col-auto">
+              <i class="fas fa-map-marker-alt fa-2x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="row mb-4">
+  <!-- Guards -->
+  <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card kpi-card bg-primary text-white">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-uppercase mb-1">Guards</div>
+            <div class="h5 mb-0 font-weight-bold">120</div>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-users fa-2x"></i> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vacation Requests -->
+  <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card kpi-card bg-success text-white">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-uppercase mb-1">Vacation Requests</div>
+            <div class="h5 mb-0 font-weight-bold">2</div>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-plane-departure fa-2x"></i> <!-- Vacation/leave icon -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Guards on Vacation -->
+  <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card kpi-card bg-info text-white">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-uppercase mb-1">Guards on Vacation</div>
+            <div class="h5 mb-0 font-weight-bold">2</div>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-umbrella-beach fa-2x"></i> <!-- Beach/vacation icon -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Clients -->
+  <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card kpi-card bg-warning text-white">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-uppercase mb-1">Clients</div>
+            <div class="h5 mb-0 font-weight-bold">8</div>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-handshake fa-2x"></i> <!-- Partnership/client icon -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="row mb-4">
+  <div class="col-12">
+      <h3 class="fw-bold">Quick Actions</h3>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <button  routerLink="/add-guard" class="btn btn-outline-primary quick-action-btn w-100 d-flex flex-column align-items-center">
+          <i class="fas fa-user-plus fa-2x mb-2"></i>
+          Add New Guard
+        </button>
+      </div>
+      <div class="col-md-4 mb-3">
+        <button class="btn btn-outline-success quick-action-btn w-100 d-flex flex-column align-items-center">
+          <i class="fas fa-building fa-2x mb-2"></i>
+          Add New Site
+        </button>
+      </div>
+      <div class="col-md-4 mb-3">
+        <button class="btn btn-outline-info quick-action-btn w-100 d-flex flex-column align-items-center">
+          <i class="fas fa-file-export fa-2x mb-2"></i>
+          Export Reports
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <h5>Guard Status</h5>
+    <div class="card">
+      <div class="card-body">
+        <div class="col-12">
+          <!-- Make this container scrollable -->
+          <div class="list-group list-group-flush" id="guard-status-list" 
+               style="max-height: 400px; overflow-y: auto;">
+            
+            <div class="list-group-item guard-status-item d-flex justify-content-between align-items-center"
+                 *ngFor="let g of guards">
+              <div>
+                <strong>{{ g.name }}</strong><br>
+                <small>{{ g.location }}</small>
+              </div>
+              <span class="badge {{ g.status }}">{{ g.shift }}</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+        </div>
+      
+

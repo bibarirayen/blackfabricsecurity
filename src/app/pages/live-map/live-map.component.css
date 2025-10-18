@@ -1,0 +1,74 @@
+.map-container {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+}
+
+#map {
+  flex: 1;
+  height: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Guards list styling */
+.guards-list {
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  overflow-y: auto;
+  max-height: 350px; /* only 4–5 guards visible, then scrollable */
+}
+
+.guards-list h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.guard-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.guard-item:hover {
+  background: #e6f0ff;
+}
+
+.guard-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.guard-item h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.guard-item p {
+  margin: 0;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+/* Optional: scrollbar styling for a cleaner look */
+.guards-list::-webkit-scrollbar {
+  width: 6px;
+}
+.guards-list::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 4px;
+}
+.guards-list::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
